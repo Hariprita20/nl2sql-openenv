@@ -1,0 +1,47 @@
+name: sql-agent-env
+version: "1.0.0"
+description: "Real-world SQL query generation environment for AI agent training"
+author: "your-hf-username"
+tags:
+  - sql
+  - natural-language-to-sql
+  - real-world
+  - database
+  - text2sql
+tasks:
+  - id: simple_select
+    name: "Simple SELECT with filter"
+    difficulty: easy
+    description: "Filter customers by country and return name + city"
+    max_score: 1.0
+  - id: join_aggregation
+    name: "JOIN with GROUP BY aggregation"
+    difficulty: medium
+    description: "Join order_items with products, compute revenue per category"
+    max_score: 1.0
+  - id: window_ranking
+    name: "Window function ranking"
+    difficulty: hard
+    description: "Rank customers by spending using window functions or subqueries"
+    max_score: 1.0
+action_space:
+  type: text
+  description: "A SQL SELECT query string"
+observation_space:
+  type: object
+  fields:
+    schema: "Database DDL as text"
+    question: "Natural language question"
+    result: "Query execution result or error"
+    reward: "Float 0.0 to 1.0"
+    done: "Boolean"
+    feedback: "Reward explanation"
+    task_id: "Current task identifier"
+    task_difficulty: "easy/medium/hard"
+    attempt: "Current attempt number"
+    max_attempts: "Maximum attempts per task (3)"
+    hint: "Optional hint for the current task"
+reward:
+  type: float
+  range: [0.0, 1.0]
+  description: "Graded by query result accuracy vs expected output"
