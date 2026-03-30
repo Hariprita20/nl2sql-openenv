@@ -74,3 +74,19 @@ def root():
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=7860)
+'EOF'
+
+def main():
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=7860)
+
+if __name__ == "__main__":
+    main()
+EOF
+[A[A[A[A[A[A[A[A[A[A[A[B[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C<<[B[B[B[B[B[B[B[B[B[B[B[B[B
+def main():
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=7860)
+
+if __name__ == "__main__":
+    main()
