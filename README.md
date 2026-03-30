@@ -1,3 +1,12 @@
+---
+title: NL2SQL OpenEnv
+emoji: 🗄️
+colorFrom: blue
+colorTo: green
+sdk: docker
+pinned: false
+---
+
 # SQL Agent Environment
 
 > A production-quality OpenEnv environment where an AI agent writes SQL queries to answer natural language questions against a realistic business database — with partial-credit scoring and multi-attempt episodes.
